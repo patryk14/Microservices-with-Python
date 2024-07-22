@@ -2,6 +2,9 @@ install:
 	#install commands
 	pip install --upgrade pip &&\
 	pip install -r requirements.txt 
+post-install:
+	python -m textblob.download_corpora
+
 format:
 	#format code
 	black *.py mylib/*.py
@@ -24,4 +27,4 @@ deploy:
 run:
 	#run docker container
 	#docker run -p 127.0.0.1:8080:8080 deploy-fastapi
-all: install format lint test deploy
+all: install post-install lint test deploy
