@@ -4,3 +4,7 @@ pytest-cov==5.0.0
 pylint==3.2.6
 black==24.4.2
 fire==0.6.0
+fastapi==0.111.1
+fastapi-cli==0.0.4
+uvicorn==0.30.3
+textblob==0.18.0
